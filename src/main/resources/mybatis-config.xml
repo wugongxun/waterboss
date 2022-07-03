@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value= "oracle.jdbc.driver.OracleDriver"/>
+                <property name="url" value= "jdbc:oracle:thin:@localhost:1521:orcl"/>
+                <property name="username" value= "wateruser"/>
+                <property name="password" value= "wgx"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--    每一个xxMapper.xml文件必须在mybatis的核心配置文件中注册-->
+    <mappers>
+        <mapper resource="mapper/OwnersMapper.xml"></mapper>
+    </mappers>
+
+</configuration>
